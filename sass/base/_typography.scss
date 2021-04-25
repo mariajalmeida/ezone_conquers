@@ -1,5 +1,25 @@
 // variables with whole typography
-@use "../abstracts/variables" as *;
-p {
-  color: $text-color;
+@use "../abstracts/variables"as *;
+
+main h1,
+main span {
+  color: $title-intro-text-color;
+}
+
+main h1 {
+  font-family: $title-font;
+  font-size: $title-font-size;
+  font-weight: $title-weight;
+}
+
+main span {
+  font-family: $intro-text-font;
+  font-size: $intro-text-font-size;
+  font-weight: $intro-text-weight;
+}
+
+/* FORM */
+
+form {
+  font-family: $form-font-family;
 }

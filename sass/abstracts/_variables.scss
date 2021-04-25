@@ -1,1 +1,21 @@
-$text-color: blue;
+@import url("../fonts/stylesheet.css");
+
+$background-colour: #16152B;
+$title-intro-text-color: #FFB591;
+
+$title-font: 'shapiro35_feather_text',
+sans-serif;
+$title-font-size: 62px;
+$title-weight: 900;
+
+$intro-text-font-size: 22px;
+$intro-text-font: 'uniformregular_2',
+sans-serif;
+$intro-text-weight: 400;
+
+$form-font-family: 'uniformregular',
+sans-serif;
+
+$buttons: #6259FA;
+$border-field: #6259FA;
+$form-text-color: #000000;
