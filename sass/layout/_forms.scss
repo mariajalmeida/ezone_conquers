@@ -1,1 +1,10 @@
 // template for the form
+@use "../abstracts/variables"as *;
+
+form {
+    background-color: $form-bg;
+    padding: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 40px;
+}
