@@ -26,6 +26,8 @@ let areas = [];
 
 window.addEventListener("load", (e) => {
   document.querySelector("button").addEventListener("click", () => {
+    console.log(areas);
+    console.log(platforms);
     const full_name = document.getElementById("full_name").value;
     const email = document.getElementById("email").value;
     const date_of_birth = document.getElementById("date_of_birth").value;
