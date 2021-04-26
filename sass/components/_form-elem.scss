@@ -1,1 +1,25 @@
 // styling for checkboxes etc
+
+@use "../abstracts/variables"as *;
+
+form {
+    #full_name {
+        width: -webkit-fill-available;
+    }
+
+    >div {
+        padding: 15px 0;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    input {
+        border: 1px solid $border-field;
+        border-radius: 2px;
+        background: $field-bg;
+    }
+}

@@ -1,9 +1,9 @@
 @use "../abstracts/variables"as *;
 
 body {
-    background-color: $background-colour;
     background: url(../../assets/background-image.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: $background-colour;
 }

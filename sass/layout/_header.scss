@@ -1,4 +1,4 @@
-// variables with whole typography
+// header styling
 @use "../abstracts/variables"as *;
 
 header {
@@ -13,6 +13,16 @@ header {
     margin-bottom: 0;
   }
 
+  h1>span {
+    display: inline-block;
+    white-space: break-spaces;
+    -webkit-text-stroke: 1px hsl($heading-colour);
+    color: hsl($heading-colour);
+    animation:
+      fill .5s calc(var(--index) * 0.02s + 1s) cubic-bezier(0.645, 0.045, 0.355, 1) both;
+    will-change: transform, color;
+  }
+
   p {
     color: $title-intro-text-color;
     font-family: $intro-text-font;
@@ -21,5 +31,21 @@ header {
     margin-top: 0;
     max-width: 800px;
     margin: auto;
+  }
+}
+
+@keyframes fill {
+  from {
+    opacity: 0;
+    transform: translateX(2rem) scale(1.2);
+    color: hsl(20 100% 82% / 0);
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  50% {
+    color: hsl(20 100% 82% / 0);
   }
 }

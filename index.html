@@ -11,30 +11,33 @@
 <body>
   <main>
     <header>
-      <h1>LOREM IPSUM</h1>
-      <p>Our newsletter comes with professional catered content to help you get a step ahead of the competition.
+      <h1 data-split-letters>LOREM IPSUM</h1>
+      <p>Our newsletter comes with professional catered content to help you get a step ahead of the
+        competition.
         We are ready to take on the challenge - are you?</p>
     </header>
 
     <form>
-      <div class="form_head">
-        <h2>PERSONAL INFORMATION</h2>
-        <p>
-          Help us personalise your experience by filling in some basic
-          information
-        </p>
-      </div>
+      <h2>PERSONAL INFORMATION</h2>
+      <p>
+        Help us personalise your experience by filling in some basic
+        information
+      </p>
       <div class="personal_info">
         <label for="full_name">Full name:</label><br />
         <input type="text" id="full_name" name="full_name" value="" /><br />
-        <label for="email">E-mail:</label><br />
-        <input type="email" id="email" name="email" /><br />
-        <label for="date_of_birth">Date of birth:</label><br />
-        <input type="month" id="date_of_birth" name="day" />
+        <div class="info">
+          <div class="email">
+            <label for="email">E-mail:</label><br />
+            <input type="email" id="email" name="email" /><br />
+          </div>
+          <div class="birth">
+            <label for="date_of_birth">Date of birth:</label><br />
+            <input type="month" id="date_of_birth" name="day" />
+          </div>
+        </div>
       </div>
-      <div class="interests_head">
-        <h2>INTERESTS INFORMATION</h2>
-      </div>
+      <h2>INTERESTS INFORMATION</h2>
       <div class="platforms_info">
         <label for="platforms">Platforms:</label><br />
         <input type="checkbox" id="platform_1" name="platform_1" />
@@ -88,7 +91,7 @@
       <button type="submit" form="" value="join">JOIN OUR COMMUNITY</button>
     </form>
   </main>
-  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/import.js"></script>
 </body>
 
 </html>
