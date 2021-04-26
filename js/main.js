@@ -31,6 +31,7 @@ window.addEventListener("load", (e) => {
     const full_name = document.getElementById("full_name").value;
     const email = document.getElementById("email").value;
     const date_of_birth = document.getElementById("date_of_birth").value;
+    document.getElementById("myForm").reset();
 
     const data = {
       full_name,
@@ -68,3 +69,7 @@ function handleClick(event) {
     }
   }
 }
+
+// function emptyFields() {
+//   document.getElementById("myForm").reset();
+// }
