@@ -21,7 +21,6 @@ splitTargets.forEach((node) => {
 });
 
 // sending data to json
-// const endpoint = "https://ezone-cd66.restdb.io/rest/ezone";
 let platforms = [];
 let areas = [];
 
