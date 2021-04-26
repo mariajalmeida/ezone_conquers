@@ -1,3 +1,25 @@
-p {
-  font-size: 50px;
+// variables with whole typography
+@use "../abstracts/variables"as *;
+
+header {
+  text-align: center;
+  margin-top: 250px;
+
+  h1 {
+    color: $title-intro-text-color;
+    font-family: $title-font;
+    font-size: $title-font-size;
+    font-weight: $title-weight;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: $title-intro-text-color;
+    font-family: $intro-text-font;
+    font-size: $intro-text-font-size;
+    font-weight: $intro-text-weight;
+    margin-top: 0;
+    max-width: 800px;
+    margin: auto;
+  }
 }

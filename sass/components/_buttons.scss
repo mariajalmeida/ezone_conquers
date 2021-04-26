@@ -1,1 +1,17 @@
 // button elements
+@use "../abstracts/variables"as *;
+
+button {
+    display: block;
+    outline: none;
+    border: none;
+    background-color: $button-bg;
+    color: $button-colour;
+    padding: 20px 40px;
+    border-radius: 60px;
+    margin: 25px auto 0 auto;
+
+    &:hover {
+        background-color: $border-field;
+    }
+}

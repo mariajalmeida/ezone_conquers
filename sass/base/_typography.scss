@@ -1,5 +1,35 @@
 // variables with whole typography
-@use "../abstracts/variables" as *;
-p {
-  color: $text-color;
+@use "../abstracts/variables"as *;
+
+/* FORM */
+form {
+  font-family: $form-font-family;
+  color: $form-text-color;
+  font-size: $form-font-size;
+
+  h2 {
+    font-weight: $h2-weight;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-weight: $desc-weight;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .personal_info {
+    label {
+      font-weight: $label-weight;
+    }
+  }
+
+  .platforms_info label:first-child {
+    font-weight: $label-weight;
+  }
+
+  .areas label:first-child {
+    font-weight: $label-weight;
+  }
+
 }

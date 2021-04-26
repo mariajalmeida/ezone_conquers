@@ -1,1 +1,27 @@
-$text-color: blue;
+@import url("../fonts/stylesheet.css");
+
+$background-colour: #16152B;
+$title-intro-text-color: #FFB591;
+
+$title-font: 'shapiro35_feather_text',
+sans-serif;
+$title-font-size: 62px;
+$title-weight: 900;
+
+$intro-text-font-size: 22px;
+$intro-text-font: 'uniformregular_2',
+sans-serif;
+$intro-text-weight: 400;
+
+$form-font-family: 'uniformregular',
+sans-serif;
+$form-font-size: 18px;
+$h2-weight: 900;
+$desc-weight: 200;
+
+$form-bg: #fff;
+$label-weight: 700;
+$button-bg: #3E14D6;
+$button-colour: #fff;
+$border-field: #6259FA;
+$form-text-color: #000000;
