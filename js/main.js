@@ -22,16 +22,21 @@ splitTargets.forEach((node) => {
 
 // sending data to json
 // const endpoint = "https://ezone-cd66.restdb.io/rest/ezone";
-const apiKey = "6083279e28bf9b609975a5e7";
+let platforms = [];
+let areas = [];
 
 window.addEventListener("load", (e) => {
   document.querySelector("button").addEventListener("click", () => {
+    const full_name = document.getElementById("full_name").value;
+    const email = document.getElementById("email").value;
+    const date_of_birth = document.getElementById("date_of_birth").value;
+
     const data = {
-      full_name: "Marek Kot",
-      email: "email@email.com",
-      date_of_birth: "April 2008",
-      platforms: "",
-      areas: "",
+      full_name,
+      email,
+      date_of_birth,
+      platforms,
+      areas,
     };
     post(data);
   });
@@ -43,11 +48,22 @@ function post(data) {
     method: "post",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
-      "x-apikey": apiKey,
+      "x-apikey": "6083279e28bf9b609975a5e7",
       "cache-control": "no-cache",
     },
     body: postData,
   })
     .then((res) => res.json())
     .then((data) => console.log(data));
+}
+function handleClick(event) {
+  if (event.target.checked) {
+    (event.target.name === "areas" ? areas : platforms).push(event.target.id);
+  } else {
+    if (event.target.name === "areas") {
+      areas = areas.filter((area) => area !== event.target.id);
+    } else {
+      platforms = platforms.filter((platform) => platform !== event.target.id);
+    }
+  }
 }
