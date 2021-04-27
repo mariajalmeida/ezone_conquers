@@ -69,7 +69,28 @@ function handleClick(event) {
     }
   }
 }
-
-// function emptyFields() {
-//   document.getElementById("myForm").reset();
+// message window
+let modal = document.getElementById("modal");
+let btn = document.getElementById("subBtn");
+let span_f = document.getElementsByClassName("close")[0];
+console.log(btn);
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+span_f.onclick = function () {
+  modal.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+// function submitMessage() {
+//   let txt;
+//   if (confirm("Thank You for subscription!")) {
+//     txt = "Succesfully submited";
+//   } else {
+//     txt = "Form canceled";
+//   }
+// document.getElementById("sub").innerHTML = txt;
 // }

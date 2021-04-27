@@ -32,5 +32,11 @@ form {
   .areas label:first-child {
     font-weight: $label-weight;
   }
-
+}
+// modal
+.modal-content {
+  p {
+    font-family: $form-font-family;
+    font-weight: $label-weight;
+  }
 }
