@@ -9,7 +9,7 @@ form {
 
   h2 {
     font-weight: $h2-weight;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     font-size: $form-font-size;
   }
 
@@ -25,12 +25,19 @@ form {
     }
   }
 
-  .platforms_info label:first-child {
+  .options-header {
     font-weight: $label-weight;
+    margin-bottom: 7px;
+    margin-top: 22px;
+    display: block;
   }
 
-  .areas label:first-child {
-    font-weight: $label-weight;
-  }
+  // .platforms_info label:first-child {
+  //   font-weight: $label-weight;
+  // }
+
+  // .areas label:first-child {
+  //   font-weight: $label-weight;
+  // }
 
 }

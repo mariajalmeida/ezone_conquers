@@ -1,1 +1,33 @@
 // media query
+
+@use "variables" as *;
+
+@mixin border-style {
+    border: $border-option;
+    border-radius: 3px;
+}
+
+@mixin checkbox-style {
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    margin-right: 5px;
+    // @include border-style;
+}
+
+@mixin option-container-style {
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+@mixin  option-header-style {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+@mixin invalid-input {
+    background-color: rgba(255, 0, 0, .1);
+    border: 2px solid rgb(170, 29, 29);
+}

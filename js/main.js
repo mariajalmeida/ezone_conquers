@@ -1,3 +1,9 @@
+// import SlimSelect from 'slim-select'
+
+// new SlimSelect({
+//   select: '#multiple'
+// })
+
 const span = (text, index) => {
   const node = document.createElement("span");
 
@@ -73,3 +79,5 @@ function handleClick(event) {
 // function emptyFields() {
 //   document.getElementById("myForm").reset();
 // }
+
+
