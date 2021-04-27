@@ -1,9 +1,3 @@
-// import SlimSelect from 'slim-select'
-
-// new SlimSelect({
-//   select: '#multiple'
-// })
-
 const span = (text, index) => {
   const node = document.createElement("span");
 
@@ -53,17 +47,18 @@ window.addEventListener("load", (e) => {
 function post(data) {
   const postData = JSON.stringify(data);
   fetch("https://ezone-cd66.restdb.io/rest/ezone", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "x-apikey": "6083279e28bf9b609975a5e7",
-      "cache-control": "no-cache",
-    },
-    body: postData,
-  })
+      method: "post",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "x-apikey": "6083279e28bf9b609975a5e7",
+        "cache-control": "no-cache",
+      },
+      body: postData,
+    })
     .then((res) => res.json())
     .then((data) => console.log(data));
 }
+
 function handleClick(event) {
   if (event.target.checked) {
     (event.target.name === "areas" ? areas : platforms).push(event.target.id);
@@ -100,5 +95,3 @@ window.onclick = function (event) {
 //   }
 // document.getElementById("sub").innerHTML = txt;
 // }
-
-
