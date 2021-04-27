@@ -26,9 +26,9 @@
         </p>
         <div class="personal_info">
           <label for="full_name">Full name:</label><br />
-          <input 
-            type="text" 
-            id="full_name" 
+          <input
+            type="text"
+            id="full_name"
             name="full_name"
             required
             pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$"
@@ -39,23 +39,26 @@
           <div class="info">
             <div class="email">
               <label for="email">E-mail:</label><br />
-              <input type="email"
+              <input
+                type="email"
                 id="email"
-                name="email" 
+                name="email"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 required
                 placeholder=" "
               />
-             <br />
+              <br />
             </div>
 
             <div class="birth">
               <label for="date_of_birth">Date of birth:</label><br />
-              <input type="date" 
-                placeholder="MM/DD/YYYY" 
-                id="date_of_birth" 
+              <input
+                type="date"
+                placeholder="MM/DD/YYYY"
+                id="date_of_birth"
                 name="day"
-                min="1900-01-01" max="2013-01-01"
+                min="1900-01-01"
+                max="2013-01-01"
                 required
               />
             </div>
@@ -186,75 +189,107 @@
         <option value="cod">Call of Duty</option>
         <option value="fifa">FIFA</option>
       </select><br /> -->
-      
-      <label for="games-played" class="options-header">Games played:</label>
-      <div class="games">
-        <div class="option-container">
-          <input type="checkbox" 
-            name="games-played" 
-            id="valorant" 
-            onchange="handleClick(event)">
-          <label for="valorant"><img src="/assets/game-icons/val.png" alt="valorant icon"></label>
+
+        <label for="games-played" class="options-header">Games played:</label>
+        <div class="games">
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="games_played"
+              id="valorant"
+              onchange="handleClick(event)"
+            />
+            <label for="valorant"
+              ><img src="/assets/game-icons/val.png" alt="valorant icon"
+            /></label>
+          </div>
+
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="games_played"
+              id="league"
+              onchange="handleClick(event)"
+            />
+            <label for="league"
+              ><img src="/assets/game-icons/lol.png" alt="lol icon"
+            /></label>
+          </div>
+
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="games_played"
+              id="csgo"
+              onchange="handleClick(event)"
+            />
+            <label for="csgo"
+              ><img src="/assets/game-icons/csgo.png" alt="csgo icon"
+            /></label>
+          </div>
+
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="games_played"
+              id="fortnite"
+              onchange="handleClick(event)"
+            />
+            <label for="fortnite"
+              ><img src="/assets/game-icons/fort.png" alt="fornite icon"
+            /></label>
+          </div>
+
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="games_played"
+              id="minecraft"
+              onchange="handleClick(event)"
+            />
+            <label for="minecraft"
+              ><img src="/assets/game-icons/mine.png" alt="minecraft icon"
+            /></label>
+          </div>
+
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="games_played"
+              id="wow"
+              onchange="handleClick(event)"
+            />
+            <label for="wow"
+              ><img src="/assets/game-icons/wow.png" alt="wow icon"
+            /></label>
+          </div>
+
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="games_played"
+              id="overwatch"
+              onchange="handleClick(event)"
+            />
+            <label for="overwatch"
+              ><img src="/assets/game-icons/over.png" alt="overwatch icon"
+            /></label>
+          </div>
+
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="games_played"
+              id="sims"
+              onchange="handleClick(event)"
+            />
+            <label for="sims"
+              ><img src="/assets/game-icons/sims.png" alt="sims icon"
+            /></label>
+          </div>
         </div>
 
-        <div class="option-container">
-          <input type="checkbox" 
-            name="games-played" 
-            id="league" 
-            onchange="handleClick(event)">
-          <label for="league"><img src="/assets/game-icons/lol.png" alt="lol icon"></label>
-        </div>
-
-        <div class="option-container">
-          <input type="checkbox" 
-            name="games-played" 
-            id="csgo" 
-            onchange="handleClick(event)">
-          <label for="csgo"><img src="/assets/game-icons/csgo.png" alt="csgo icon"></label>
-        </div>
-
-        <div class="option-container">
-          <input type="checkbox" 
-            name="games-played" 
-            id="fortnite" 
-            onchange="handleClick(event)">
-          <label for="fortnite"><img src="/assets/game-icons/fort.png" alt="fornite icon"></label>
-        </div>
-
-        <div class="option-container">
-          <input type="checkbox" 
-            name="games-played" 
-            id="minecraft" 
-            onchange="handleClick(event)">
-          <label for="minecraft"><img src="/assets/game-icons/mine.png" alt="minecraft icon"></label>
-        </div>
-
-        <div class="option-container">
-          <input type="checkbox" 
-            name="games-played" 
-            id="wow" 
-            onchange="handleClick(event)">
-          <label for="wow"><img src="/assets/game-icons/wow.png" alt="wow icon"></label>
-        </div>
-
-        <div class="option-container">
-          <input type="checkbox" 
-            name="games-played" 
-            id="overwatch" 
-            onchange="handleClick(event)">
-          <label for="overwatch"><img src="/assets/game-icons/over.png" alt="overwatch icon"></label>
-        </div>
-
-        <div class="option-container">
-          <input type="checkbox" 
-            name="games-played" 
-            id="sims" 
-            onchange="handleClick(event)">
-          <label for="sims"><img src="/assets/game-icons/sims.png" alt="sims icon"></label>
-        </div>
-      </div>
-
-      <label for="areas" class="options-header">Improvement areas:</label>
+        <label for="areas" class="options-header">Improvement areas:</label>
         <div class="areas">
           <!-- <div class="option-container">
           <input
@@ -266,104 +301,104 @@
           <label for="hand/eye_coordination">Hand/eye coordination</label>
         </div> -->
 
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="reaction"
-            onchange="handleClick(event)"
-          />
-          <label for="reaction">Reaction time</label>
-        </div>
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="reaction"
+              onchange="handleClick(event)"
+            />
+            <label for="reaction">Reaction time</label>
+          </div>
 
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="hearing"
-            onchange="handleClick(event)"
-          />
-          <label for="hearing">Hearing</label>
-        </div>
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="hearing"
+              onchange="handleClick(event)"
+            />
+            <label for="hearing">Hearing</label>
+          </div>
 
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="vision"
-            onchange="handleClick(event)"
-          />
-          <label for="vision">Vision</label>
-        </div>
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="vision"
+              onchange="handleClick(event)"
+            />
+            <label for="vision">Vision</label>
+          </div>
 
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="sleep"
-            onchange="handleClick(event)"
-          />
-          <label for="sleep">Sleep</label>
-        </div>
-          
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="mindset"
-            onchange="handleClick(event)"
-          />
-          <label for="mindset">Mindset</label>
-        </div>
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="sleep"
+              onchange="handleClick(event)"
+            />
+            <label for="sleep">Sleep</label>
+          </div>
 
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="stress"
-            onchange="handleClick(event)"
-          />
-          <label for="stress">Stress</label>
-        </div>
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="mindset"
+              onchange="handleClick(event)"
+            />
+            <label for="mindset">Mindset</label>
+          </div>
 
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="nutrition"
-            onchange="handleClick(event)"
-          />
-          <label for="nutrition">Nutrition</label>
-        </div>
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="stress"
+              onchange="handleClick(event)"
+            />
+            <label for="stress">Stress</label>
+          </div>
 
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="injuries"
-            onchange="handleClick(event)"
-          />
-          <label for="injuries">Injuries</label>
-        </div>
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="nutrition"
+              onchange="handleClick(event)"
+            />
+            <label for="nutrition">Nutrition</label>
+          </div>
 
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="technology"
-            onchange="handleClick(event)"
-          />
-          <label for="technology">Technology</label>
-        </div>
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="injuries"
+              onchange="handleClick(event)"
+            />
+            <label for="injuries">Injuries</label>
+          </div>
 
-        <div class="option-container">
-          <input
-            type="checkbox"
-            name="areas"
-            id="physiology"
-            onchange="handleClick(event)"
-          />
-          <label for="physiology">Physiology</label>
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="technology"
+              onchange="handleClick(event)"
+            />
+            <label for="technology">Technology</label>
+          </div>
+
+          <div class="option-container">
+            <input
+              type="checkbox"
+              name="areas"
+              id="physiology"
+              onchange="handleClick(event)"
+            />
+            <label for="physiology">Physiology</label>
           </div>
         </div>
 
@@ -374,8 +409,9 @@
           <option value="value 3">Racing</option>
         </select> -->
 
-
-        <button type="submit" id="subBtn" form="" value="join">JOIN OUR COMMUNITY</button>
+        <button type="submit" id="subBtn" form="" value="join">
+          JOIN OUR COMMUNITY
+        </button>
       </form>
       <div id="modal" class="modal">
         <div class="modal-content">
