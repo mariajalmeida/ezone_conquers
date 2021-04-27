@@ -1,6 +1,7 @@
 // styling for checkboxes etc
 
 @use "../abstracts/variables"as *;
+@use "../abstracts/mixins" as *;
 
 form {
     #full_name {
@@ -15,11 +16,110 @@ form {
         display: flex;
         justify-content: space-between;
         margin: 10px 0;
+
+        input[type=date] {
+            font-family: $form-font-family;
+            font-size: $form-font-size;
+        }
+
     }
 
     input {
-        border: 1px solid $border-field;
-        border-radius: 2px;
+        @include border-style;
         background: $field-bg;
+        padding: 7px;
+        margin: 7px 0 10px 0;
+        height: 22px;
     }
+
+    input:focus {
+        background-color: rgba(95, 87, 250, 0.2);
+        outline: 1px solid $button-bg;
+    }
+
+    input[type="text"]:not(:placeholder-shown) {
+        &:invalid{
+            @include invalid-input;
+        }
+    }
+
+    // input[type="email"]:invalid {
+    //     @include invalid-input;
+    // }
+
+    input[type="email"]:not(:placeholder-shown) {
+        &:invalid{
+            @include invalid-input;
+        }
+    }
+
+    .platforms_info {
+        @include option-header-style;
+
+        .option-container {
+            margin-right: 20px;
+            @include option-container-style;
+
+            input {
+                @include checkbox-style;
+            }
+        }
+    }
+
+    .areas {
+        @include option-header-style;
+        
+        .option-container {
+            min-width: 31%;
+            @include option-container-style;
+
+            input {
+                @include checkbox-style;
+            }
+            
+        }
+    }
+
+    .games {
+        @include option-header-style;
+
+        .option-container {
+            margin-right: 12px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            height: 70px;
+            width: 70px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            opacity: .5;
+            transition: .3s;
+        }
+
+        :checked+label, label:hover {
+            opacity: 1;
+        }
+    }
+
+    // select{
+    //     background: none;
+    //     color: grey;
+    //     width: 100%;
+    //     max-width: 550px;
+    //     display: block;
+    //     margin: 0 auto;
+    //     height: 50px;
+    //     padding: 0 20px;
+    //     font-size: $form-font-size;
+    //     @include border-style;
+    //   }
 }

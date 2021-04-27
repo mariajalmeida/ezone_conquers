@@ -2,15 +2,16 @@
 @use "../abstracts/variables"as *;
 
 button {
-  display: block;
-  outline: none;
-  border: none;
-  background-color: $button-bg;
-  color: $button-colour;
-  padding: 20px 40px;
-  border-radius: 60px;
-  margin: 25px auto 0 auto;
-  font-weight: 800;
+    display: block;
+    outline: none;
+    border: none;
+    background-color: $button-bg;
+    color: $button-colour;
+    padding: 20px 40px;
+    border-radius: 60px;
+    margin: 25px auto 0 auto;
+    font-weight: 800;
+    cursor: pointer;
 
   &:hover {
     background-color: $border-field;

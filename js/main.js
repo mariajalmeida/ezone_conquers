@@ -1,3 +1,9 @@
+// import SlimSelect from 'slim-select'
+
+// new SlimSelect({
+//   select: '#multiple'
+// })
+
 const span = (text, index) => {
   const node = document.createElement("span");
 
@@ -94,3 +100,5 @@ window.onclick = function (event) {
 //   }
 // document.getElementById("sub").innerHTML = txt;
 // }
+
+
