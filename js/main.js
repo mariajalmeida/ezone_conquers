@@ -23,6 +23,8 @@ splitTargets.forEach((node) => {
 // sending data to json
 let platforms = [];
 let areas = [];
+let platform = [];
+let games_played = [];
 
 window.addEventListener("load", (e) => {
   document.querySelector("button").addEventListener("click", () => {
@@ -37,7 +39,8 @@ window.addEventListener("load", (e) => {
       full_name,
       email,
       date_of_birth,
-      platforms,
+      platform,
+      games_played,
       areas,
     };
     post(data);
@@ -47,27 +50,50 @@ window.addEventListener("load", (e) => {
 function post(data) {
   const postData = JSON.stringify(data);
   fetch("https://ezone-cd66.restdb.io/rest/ezone", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-        "x-apikey": "6083279e28bf9b609975a5e7",
-        "cache-control": "no-cache",
-      },
-      body: postData,
-    })
+    method: "post",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": "6083279e28bf9b609975a5e7",
+      "cache-control": "no-cache",
+    },
+    body: postData,
+  })
     .then((res) => res.json())
     .then((data) => console.log(data));
+  platform = [];
+  areas = [];
+  games_played = [];
 }
 
 function handleClick(event) {
-  if (event.target.checked) {
-    (event.target.name === "areas" ? areas : platforms).push(event.target.id);
-  } else {
-    if (event.target.name === "areas") {
-      areas = areas.filter((area) => area !== event.target.id);
+  const {
+    target: { name },
+  } = event;
+  switch (name) {
+    case "platform":
+      arrayReducer(platform);
+      break;
+    case "areas":
+      arrayReducer(areas);
+      break;
+    case "games_played":
+      arrayReducer(games_played);
+  }
+  function arrayReducer(array) {
+    console.log(event.target.checked);
+    if (event.target.checked) {
+      array.push(event.target.id);
     } else {
-      platforms = platforms.filter((platform) => platform !== event.target.id);
+      if (name === "platform") {
+        platform = array.filter((name) => name !== event.target.id);
+      } else if (name === "areas") {
+        areas = array.filter((name) => name !== event.target.id);
+      } else {
+        games_played = array.filter((name) => name !== event.target.id);
+      }
     }
+    console.log(array);
+    console.log(event.target.id);
   }
 }
 // message window
@@ -77,6 +103,9 @@ let span_f = document.getElementsByClassName("close")[0];
 console.log(btn);
 btn.onclick = function () {
   modal.style.display = "block";
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 6000);
 };
 span_f.onclick = function () {
   modal.style.display = "none";
