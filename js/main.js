@@ -1,9 +1,3 @@
-// import SlimSelect from 'slim-select'
-
-// new SlimSelect({
-//   select: '#multiple'
-// })
-
 const span = (text, index) => {
   const node = document.createElement("span");
 
@@ -70,6 +64,7 @@ function post(data) {
   areas = [];
   games_played = [];
 }
+
 function handleClick(event) {
   const {
     target: { name },
@@ -120,3 +115,12 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+// function submitMessage() {
+//   let txt;
+//   if (confirm("Thank You for subscription!")) {
+//     txt = "Succesfully submited";
+//   } else {
+//     txt = "Form canceled";
+//   }
+// document.getElementById("sub").innerHTML = txt;
+// }

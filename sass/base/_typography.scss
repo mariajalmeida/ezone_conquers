@@ -25,7 +25,8 @@ form {
     }
   }
 
-  .options-header {
+  .options-header,
+  .types-header {
     font-weight: $label-weight;
     margin-bottom: 7px;
     margin-top: 22px;
@@ -36,6 +37,7 @@ form {
     font-weight: $label-weight;
   }
 }
+
 // modal
 .modal-content {
   p {
@@ -43,4 +45,3 @@ form {
     font-weight: $label-weight;
   }
 }
-
