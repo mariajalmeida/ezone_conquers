@@ -15,8 +15,6 @@ splitTargets.forEach((node) => {
   let nodes = null;
   nodes = byLetter(node.innerText);
 
-  console.log(node.firstChild);
-
   if (nodes) node.firstChild.replaceWith(...nodes);
 });
 
@@ -50,14 +48,14 @@ window.addEventListener("load", (e) => {
 function post(data) {
   const postData = JSON.stringify(data);
   fetch("https://ezone-cd66.restdb.io/rest/ezone", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "x-apikey": "6083279e28bf9b609975a5e7",
-      "cache-control": "no-cache",
-    },
-    body: postData,
-  })
+      method: "post",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "x-apikey": "6083279e28bf9b609975a5e7",
+        "cache-control": "no-cache",
+      },
+      body: postData,
+    })
     .then((res) => res.json())
     .then((data) => console.log(data));
   platform = [];
@@ -67,7 +65,9 @@ function post(data) {
 
 function handleClick(event) {
   const {
-    target: { name },
+    target: {
+      name
+    },
   } = event;
   switch (name) {
     case "platform":
@@ -79,6 +79,7 @@ function handleClick(event) {
     case "games_played":
       arrayReducer(games_played);
   }
+
   function arrayReducer(array) {
     console.log(event.target.checked);
     if (event.target.checked) {
@@ -92,15 +93,14 @@ function handleClick(event) {
         games_played = array.filter((name) => name !== event.target.id);
       }
     }
-    console.log(array);
-    console.log(event.target.id);
   }
 }
+
 // message window
 let modal = document.getElementById("modal");
 let btn = document.getElementById("subBtn");
 let span_f = document.getElementsByClassName("close")[0];
-console.log(btn);
+
 btn.onclick = function () {
   modal.style.display = "block";
   setTimeout(() => {
@@ -115,12 +115,3 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-// function submitMessage() {
-//   let txt;
-//   if (confirm("Thank You for subscription!")) {
-//     txt = "Succesfully submited";
-//   } else {
-//     txt = "Form canceled";
-//   }
-// document.getElementById("sub").innerHTML = txt;
-// }

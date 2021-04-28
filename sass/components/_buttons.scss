@@ -2,32 +2,18 @@
 @use "../abstracts/variables"as *;
 
 button {
-    display: block;
-    outline: none;
-    border: none;
-    background-color: $button-bg;
-    color: $button-colour;
-    padding: 20px 40px;
-    border-radius: 60px;
-    margin: 25px auto 0 auto;
-    font-weight: 800;
-    cursor: pointer;
+  display: block;
+  outline: none;
+  border: none;
+  background-color: $button-bg;
+  color: $button-colour;
+  padding: 20px 40px;
+  border-radius: 60px;
+  margin: 25px auto 0 auto;
+  font-weight: 800;
+  cursor: pointer;
 
   &:hover {
     background-color: $border-field;
   }
-}
-/* The close button modal*/
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
